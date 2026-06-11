@@ -51,7 +51,7 @@ Before you begin, ensure you have met the following requirements:
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/vidit-khare/docker-deployment-todoapp.git
+    git clone https://github.com/<your-repo>.git
     ```
 
     ```sh
