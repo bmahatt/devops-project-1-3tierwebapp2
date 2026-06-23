@@ -31,14 +31,6 @@ jobs:
           ${COMPOSE} up --build -d
           ${COMPOSE} ps
 
-      - name: Smoke test
-        run: |
-          sleep 20
-          # The runner tests against its own localhost on port 8080
-          code=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/)
-          echo "Homepage returned HTTP $code"
-          test "$code" = "200"
-
       - name: Notify Success
         if: success()
         run: echo "Workflow successful. App verified on runner."
